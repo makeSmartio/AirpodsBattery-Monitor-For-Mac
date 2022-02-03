@@ -211,14 +211,14 @@ class AirPodsBatteryViewModel: BluetoothAirpodsBatteryManagementProtocol {
             }
             
             if let leftValue = Int(groups[1]) {
-                let value = leftValue > 0 ? "\(leftValue) %": "--"
-                self.displayStatusMessage.append("\("left".localized): \(value) | ")
+                let value = leftValue > 0 ? "\(leftValue)": "--"
+                self.displayStatusMessage.append("\("".localized)\(value)|")
                 left = CGFloat(leftValue)
             }
             
             if let rightValue = Int(groups[2]) {
-                let value = rightValue > 0 ? "\(rightValue) %": "--"
-                self.displayStatusMessage.append("\("right".localized): \(value)")
+                let value = rightValue > 0 ? "\(rightValue)": "--"
+                self.displayStatusMessage.append("\("".localized)\(value)")
                 right = CGFloat(rightValue)
             }
             
