@@ -38,6 +38,7 @@ final class BashExecutor: CommandExecuting {
             completion(.success(data))
         } else {
             completion(.failure(IOError.deviceNotConnected))
+            //Jay - add clear display?
         }
     }
     
